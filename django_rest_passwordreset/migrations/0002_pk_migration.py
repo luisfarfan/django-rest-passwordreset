@@ -40,7 +40,7 @@ def get_migrations_for_django_before_21():
         migrations.AlterField(
             model_name='resetpasswordtoken',
             name='key',
-            field=models.CharField(db_index=True, max_length=64, unique=True, verbose_name='Key'),
+            field=models.CharField(db_index=True, max_length=64, verbose_name='Key'),
         ),
     ]
 
@@ -51,7 +51,7 @@ def get_migrations_for_django_21_and_newer():
         migrations.AlterField(
             model_name='resetpasswordtoken',
             name='key',
-            field=models.CharField(db_index=True, primary_key=False, max_length=64, unique=True, verbose_name='Key'),
+            field=models.CharField(db_index=True, primary_key=False, max_length=64, verbose_name='Key'),
         ),
         # add a new id field
         migrations.AddField(
